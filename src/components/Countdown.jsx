@@ -25,15 +25,18 @@ const CountdownToSeptember = () => {
     ];
   
     return (
-      <div className="flex flex-col justify-center items-center px-4">
-        <div className="flex justify-center flex-nowrap gap-4 mb-8 overflow-x-auto">
-          {time.map((item, index) => (
-            <div key={index} className="bg-black border-2 border-white rounded-lg p-4 text-center w-20 sm:w-24">
-              <span className="text-sm text-white block">{item.label}</span>
-              <span className="text-2xl sm:text-3xl text-white">{item.value}</span>
-            </div>
-          ))}
-        </div>
+     <div className="flex flex-col justify-center items-center px-4">
+      <div className="grid grid-cols-4 gap-4 mb-8 w-full max-w-2xl">
+    {time.map((item, index) => (
+      <div
+        key={index}
+        className="bg-black border-2 border-white rounded-lg p-4 text-center min-w-[70px] sm:min-w-[90px] flex flex-col justify-center items-center"
+      >
+        <span className="text-sm text-white">{item.label}</span>
+        <span className="text-2xl sm:text-3xl text-white">{item.value}</span>
+      </div>
+    ))}
+  </div>
         <button
           className="bg-black hover:bg-[#DC5F00] transition duration-500 text-white font-bold text-3xl py-4 px-12 rounded-lg mt-8 shadow-lg hover:-translate-y-3 border-2 border-white active:scale-95 hover:scale-105"
           style={{
