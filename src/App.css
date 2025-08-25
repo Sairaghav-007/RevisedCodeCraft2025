@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+#particles canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-animation 2s ease infinite;
+}
+
+  @keyframes changeGradient {
+    0% {
+      border-image: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82) 1;
+    }
+    25% {
+      border-image: linear-gradient(60deg, #5073b8, #1098ad, #07b39b, #6fba82, #f79533, #f37055, #ef4e7b, #a166ab) 1;
+    }
+    50% {
+      border-image: linear-gradient(60deg, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82, #f79533, #f37055, #ef4e7b) 1;
+    }
+    75% {
+      border-image: linear-gradient(60deg, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82, #f79533, #f37055) 1;
+    }
+    100% {
+      border-image: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82) 1;
+    }
+  }
+
+  
