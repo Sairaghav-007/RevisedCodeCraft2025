@@ -25,16 +25,19 @@ const Domain = () => {
       id="domain"
     >
       <p className="text-center text-6xl font-semibold text-white pb-10 mt-8">Domains</p>
-      <div className="flex space-x-10 mt-10">
-        {cards.map((card, index) => (
-          <DomainCard
-            key={index}
-            title={card.title}
-            description={card.description}
-            animationData={card.animationData}
-          />
-        ))}
-      </div>
+      <div className="flex justify-center mt-10">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-items-center">
+    {cards.map((card, index) => (
+      <DomainCard
+        key={index}
+        title={card.title}
+        description={card.description}
+        animationData={card.animationData}
+      />
+    ))}
+  </div>
+</div>
+      
     </div>
   );
 };

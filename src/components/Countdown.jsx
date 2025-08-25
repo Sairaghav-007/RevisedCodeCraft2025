@@ -25,12 +25,12 @@ const CountdownToSeptember = () => {
     ];
   
     return (
-      <div className="flex flex-col justify-center items-center">
-        <div className="flex justify-center space-x-4 mb-8">
+      <div className="flex flex-col justify-center items-center px-4">
+        <div className="flex justify-center flex-nowrap gap-4 mb-8 overflow-x-auto">
           {time.map((item, index) => (
-            <div key={index} className="bg-black border-2 border-white rounded-lg p-4 text-center w-15">
-              <span className="text-1xl text-white">{item.label}</span>
-              <span className="text-3xl text-white block">{item.value}</span>
+            <div key={index} className="bg-black border-2 border-white rounded-lg p-4 text-center w-20 sm:w-24">
+              <span className="text-sm text-white block">{item.label}</span>
+              <span className="text-2xl sm:text-3xl text-white">{item.value}</span>
             </div>
           ))}
         </div>
